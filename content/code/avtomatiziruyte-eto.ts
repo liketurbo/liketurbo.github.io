@@ -164,7 +164,9 @@ class ColTag {
   constructor(public align?: "left" | "center" | "right") {}
 
   static parse(html: string) {
-    const matches = html.match(/<col\s?(?:align="(left|center|right)")?\s?\/>/);
+    const matches = html.match(
+      /<col\s*(?:align="(left|center|right)")?\s*\/?>/
+    );
     if (!matches) throw new GuaranteeError("must be valid col");
     switch (matches[1]) {
       case "left":
