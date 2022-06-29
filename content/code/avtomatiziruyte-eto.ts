@@ -25,6 +25,15 @@ function buildMd(tableTag: TableTag) {
   }
   lines.push(line);
 
+  // Handle case when we more that 1 header
+  if (tableTag.thead && tableTag.thead.children.length > 1) {
+    for (let i = 1; i < tableTag.thead.children.length; i++) {
+      const tr = tableTag.thead.children[i];
+      line = createRowLine(tr);
+      lines.push(line);
+    }
+  }
+
   if (tableTag.tbody) {
     // If we already used first row as header then we skip it
     for (
@@ -131,9 +140,9 @@ class TheadTag {
   static parse(html: string) {
     let matches = html.match(/<thead>.*<\/thead>/s);
     if (!matches) return undefined;
-    matches = matches[0].match(/<tr>.*<\/tr>/s);
-    if (!matches) throw new GuaranteeError("thead must have a row");
-    const children = [TrTag.parse(matches[0])];
+    matches = matches[0].match(/<tr>.*?<\/tr>/gs);
+    if (!matches) throw new GuaranteeError("thead must have at least one row");
+    const children = matches.map((r) => TrTag.parse(r));
     return new TheadTag(children);
   }
 }
