@@ -2,8 +2,5 @@
 /public/
 /resources/
 
-# dependencies
-/node_modules/
-
 # idle
 /.vscode/
