@@ -2,3 +2,5 @@ baseURL = "/"
 languageCode = "en-us"
 title = "Rami's Mixtape"
 theme = "cactus"
+[params]
+  mainSectionTitle = "Записи"
