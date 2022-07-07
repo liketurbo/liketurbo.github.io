@@ -2,5 +2,6 @@ baseURL = "/"
 languageCode = "en-us"
 title = "Rami's Mixtape"
 theme = "cactus"
-[params]
+[Params]
+  yandexAnalytics = "89442417"
   mainSectionTitle = "Записи"
