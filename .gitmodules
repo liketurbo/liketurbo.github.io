@@ -1,0 +1,3 @@
+[submodule "hugo-ficurinia"]
+	path = themes/hugo-ficurinia
+	url = https://gitlab.com/liketurbo/hugo-ficurinia.git
