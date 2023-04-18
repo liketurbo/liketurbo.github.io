@@ -1,7 +1,31 @@
-baseURL = "/"
-languageCode = "en-us"
+baseURL = "https://liketurbo.github.io/"
+theme = "hugo-ficurinia"
 title = "Rami's Mixtape"
-theme = "cactus"
-[Params]
-  yandexAnalytics = "89442417"
-  mainSectionTitle = "Записи"
+languageCode = "en"
+defaultContentLanguage = "en"
+copyright = "Copyright Rami's Mixtape"
+
+[params]
+  showRss = false
+
+[menu]
+  [[menu.icons]]
+    identifier = "github"
+    name = "GitHub"
+    url = "https://github.com/liketurbo"
+    weight = 10
+  [[menu.icons]]
+    identifier = "twitter"
+    name = "Twitter"
+    url = "https://twitter.com/ramichasygov"
+    weight = 20
+  [[menu.icons]]
+    identifier = "email"
+    name = "Email"
+    url = "mailto:3c9wjqgw5@mozmail.com"
+    weight = 30
+  [[menu.icons]]
+    identifier = "telegram"
+    name = "Telegram"
+    url = "https://t.me/liketurbo"
+    weight = 40
